@@ -71,12 +71,12 @@ public partial class Content_Danhmuc_Danhmuckho : System.Web.UI.Page
 
 
 
-    protected void btnEdit_Click(object sender, EventArgs e)
+
+    protected void BtnEdit_Click(object sender, EventArgs e)
     {
         Button btn = sender as Button;
         GridViewRow grow = btn.NamingContainer as GridViewRow;
         hid.Value = (grow.FindControl("lblStoreId") as Label).Text;
         txtReceive.Text = (grow.FindControl("lblStoreName") as Label).Text;
-   
     }
 }

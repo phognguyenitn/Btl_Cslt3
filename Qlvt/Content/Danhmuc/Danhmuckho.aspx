@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
     <style type="text/css">
         .auto-style1 {
-            margin-right: 51px;
+            margin-right: 0px;
         }
         .auto-style2 {
             text-align: center;
@@ -18,10 +18,10 @@
              BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Width="459px" AllowPaging="True" OnPageIndexChanging="dgvDmk_PageIndexChanging"
              OnSelectedIndexChanged="dgvDmk_SelectedIndexChanged" OnRowDataBound="dgvDmk_RowDataBound" CssClass="auto-style1">
             <Columns >
-                <asp:TemplateField HeaderText="Mã Kho">
+                <asp:TemplateField HeaderText="Mã Kho" >
                     
-                    <ItemTemplate>
-                        <asp:Label ID="lblStoreId" runat="server" Text='<%#Eval("Ma_Kho") %>'>'></asp:Label>
+                    <ItemTemplate  >
+                        <asp:Label  ID="lblStoreId" runat="server" Text='<%#Eval("Ma_Kho") %>'>'></asp:Label>
                     </ItemTemplate>
                     
                 </asp:TemplateField>
@@ -32,10 +32,12 @@
                     </ItemTemplate>
                 </asp:TemplateField>
             
-                <asp:TemplateField HeaderText="Operate" >
+                <asp:TemplateField HeaderText="Operate">
+                    <HeaderStyle Width="150" />
+                    <ItemStyle Width="150" />
                     <ItemTemplate>
-                        <asp:Button ID="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" />
-                        <asp:Button ID="Button2" runat="server" Text="Delete" />
+                        <asp:Button ID="BtnEdit" runat="server" OnClick="BtnEdit_Click" Text="Edit" />
+                        <asp:Button ID="btnDelete" runat="server" Text="Delete" />
                     </ItemTemplate>
                 </asp:TemplateField>
             
