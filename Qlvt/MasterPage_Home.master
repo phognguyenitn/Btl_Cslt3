@@ -118,10 +118,11 @@
 
 
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
                </asp:ContentPlaceHolder>
                        
                <div id="footer" style="font-size: 15px">
-                   <div style="padding-top: 1px" class="footer_copyright"> <p> CopyRight &copy; 2016 KieuHanh<p></div>
+                   <div style="padding-top: 1px" class="footer_copyright"> <p> CopyRight &copy; 2016 KieuHanh</p></div>
                    <div class="footer_mail_icon"><img src="../../Image/mail_fix.gif" /> </div> 
                    <div class="footer_mail">KieuHanhNguyenVu.com</div>
                    <div class="footer_phone_icon"><img src="../../Image/phong_fix.gif" /> </div>
