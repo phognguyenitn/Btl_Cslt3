@@ -101,6 +101,14 @@ table tr td:hover .menuBarGroup {
     padding-bottom: 30px;
     padding-top: 5px;
 }
+
+#danhmuc_insert {
+    position: absolute;
+    width: 500px;
+    display: none;
+    height: 700px;
+    background-color: coral;
+}
 /*footer*/
 #footer {
     color: white;   

@@ -6,6 +6,15 @@
             text-align: center;
         }
     </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+          
+            $("#btn_insertkho").click(function () {
+                $("#danhmuc_insert").show();
+            });
+        });
+</script>
 </asp:Content>
     
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
@@ -54,6 +63,12 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
             </asp:GridView>
+        </div>
+        <div>
+            <asp:Button ID="btn_insertkho" runat="server" Text="Create" />
+        </div>
+        <div id="danhmuc_insert">
+            <div></div>
         </div>
        
     </div>
