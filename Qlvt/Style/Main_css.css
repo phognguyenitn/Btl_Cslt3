@@ -97,9 +97,62 @@ table tr td:hover .menuBarGroup {
     background-color: #e9e9e9;
 }
 #dgv_danhmuckho {
+    clear: both;
     display: block;
-    padding-bottom: 30px;
+    padding-bottom: 4px;
     padding-top: 5px;
+}
+/*//Thêm kho*/
+#open_kho {
+
+background: white none repeat scroll 0% 0%;
+width: 332px;
+}
+#block_insertkho {
+    position: absolute;
+    left: 450px;
+    top: 147px;
+    display: none;
+}
+.danhmuckho_tittle {
+    width: 100%;
+    background-color: #D1EEEE;
+    padding: 3px;
+}
+.title_themkho {
+      width: 450px;
+    height: 19px;
+    background: #FFFFE0;
+}
+.content_themkho {
+      
+    width: 450px;
+    height: 50px;
+    padding-top: 16px;
+    background-color: #ffffff;
+}
+.content_themkho_item {
+    float: left;
+    margin-left: 7px;
+}
+.button_themkho {
+     width: 400px;
+       float: left;
+    background-color: #ffffff;
+    
+}
+.button_themkho_item {
+    float: left;
+
+}
+
+#danhmuc_insert {
+    position: absolute;
+    width: 500px;
+    display: block;
+    height: 300px;
+    background-color: coral;
+    z-index: 10000;
 }
 /*footer*/
 #footer {
