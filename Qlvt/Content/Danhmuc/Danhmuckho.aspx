@@ -17,17 +17,30 @@
                  $("#block_insertkho").hide("Slow");
              });
          });     
+     </script>
+    <script>
+        $(document).ready(function() {
+            $("#cancel_btn").click(function () {
+                $('#txtId_Insert').val('');
+                $("#cancel_btn").click(function () {
+                $('#txtName_insert').val('');
+            });
+            });
+        });      
     </script>
    
 </asp:Content>
     
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+    
+<%--Tittle--%>
      <div class="danhmuckho_tittle">
             <div>Danh mục kho</div>
               <div style="font-size: 12px;">Cập nhập, sửa, xóa danh mục kho</div>
-        </div>     
-    <div id="danhmuckho_content">
-              
+        </div>   
+<%--Content--%>      
+    Them
+    <div id="danhmuckho_content">             
          <div id="open_kho" style="cursor: pointer"  >                      
              <img src="../../Image/create_icon.gif" />            
          </div>          
@@ -42,20 +55,22 @@
             </div>
             <div class="content_themkho">
                 <div class="content_themkho_item" style="margin-top: 5px">Mã kho</div>
-                <div class="content_themkho_item"><asp:TextBox runat="server" ID="txtId_Insert"></asp:TextBox></div>
-                <div class="content_themkho_item" style="margin-top: 5px">Tên kho</div>
-                 <div class="content_themkho_item"><asp:TextBox runat="server" ID="txtName_insert"></asp:TextBox></div>
+                <div class="content_themkho_item"><asp:TextBox ClientIDMode="Static" runat="server" ID="txtId_Insert"></asp:TextBox></div>
+              <div class="content_themkho_item" style="margin-top: 5px">Tên kho</div>
+                 <div class="content_themkho_item"><asp:TextBox ClientIDMode="Static" runat="server" ID="txtName_insert"></asp:TextBox></div>
+              
+             
             </div>
             <div class="button_themkho" style="padding-bottom: 3px;" >
-                <div class="button_themkho_item" style="margin-left: 155px"><asp:Button runat="server" Text="Save" ID="BtnSave" OnClick="BtnSave_Click" Width="60px"/></div>
-                <div class="button_themkho_item" style="margin-left: 10px"><asp:Button runat="server" Text="Delete" ID="btnXoa" OnClick="btnXoa_Click"  Width="60px"/></div>
+                <div class="button_themkho_item" style="margin-left: 155px;cursor: pointer"><asp:Button runat="server" Text="Save" ID="BtnSave" OnClick="BtnSave_Click" Width="60px"/></div>              
+               <div class="button_themkho_item"  style="margin-left: 15px;cursor: pointer" id="cancel_btn">Clear</div>
             </div>
         </div>
             
 
      
         <div id="dgv_danhmuckho" class="auto-style2" >
-            <asp:HiddenField runat="server" ID="hid"></asp:HiddenField>
+          
             <asp:GridView ID="dgvDmk" runat="server" AllowPaging="True" AutoGenerateColumns="False" PageSize="7" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnPageIndexChanging="dgvDmk_PageIndexChanging" OnRowCancelingEdit="dgvDmk_RowCancelingEdit" OnRowDataBound="dgvDmk_RowDataBound" OnRowDeleting="dgvDmk_RowDeleting" OnRowEditing="dgvDmk_RowEditing" OnRowUpdating="dgvDmk_RowUpdating">
                 <Columns>
                     <asp:TemplateField HeaderText="Mã Kho">
@@ -81,7 +96,7 @@
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Button ID="btnEdit" runat="server" Text="Edit" CommandName="Edit" Width="50px" />
-                            <asp:Button ID="btnDelete" runat="server" Text="Delete" CommandName="Delete" Width="50px" />
+                            <asp:Button ID="btnDelete" runat="server"  Text="Delete" CommandName="Delete" Width="50px"  />
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
@@ -98,11 +113,9 @@
                 <SortedDescendingCellStyle BackColor="#CAC9C9" />
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
             </asp:GridView>
+              <div><asp:Label runat="server" ID="lblError"></asp:Label></div>
         </div>
-   
-    
-     
-       
+ 
     </div>
 </asp:Content>
 

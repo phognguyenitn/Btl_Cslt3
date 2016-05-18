@@ -136,7 +136,7 @@ width: 332px;
     margin-left: 7px;
 }
 .button_themkho {
-     width: 400px;
+     width: 450px;
        float: left;
     background-color: #ffffff;
     
@@ -146,13 +146,52 @@ width: 332px;
 
 }
 
-#danhmuc_insert {
-    position: absolute;
-    width: 500px;
-    display: block;
-    height: 300px;
-    background-color: coral;
-    z-index: 10000;
+#cancel_btn {
+        padding: 1px 6px;
+        width: 60px;
+            align-items: flex-start;
+    text-align: center;
+    cursor: default;
+    color: buttontext;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    background-color: buttonface;
+    box-sizing: border-box;
+    padding: 2px 6px 3px;
+    border-width: 2px;
+    border-style: outset;
+    border-color: buttonface;
+        -webkit-appearance: push-button;
+    -webkit-user-select: none;
+    white-space: pre;
+    -webkit-appearance: textfield;
+    background-color: white;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    -webkit-rtl-ordering: logical;
+    -webkit-user-select: text;
+    cursor: auto;
+    padding: 1px;
+    border-width: 2px;
+    border-style: inset;
+    border-color: initial;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    margin: 0em 0em 0em 0em;
+    font: 13.3333px Arial;
+    background-color: #e9e9e9;
 }
 /*footer*/
 #footer {
