@@ -10,11 +10,13 @@
     </asp:ContentPlaceHolder>
     <link href="Style/Main_css.css" rel="stylesheet" />
 
+  
 
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div class=" wrapper" >
+     <div class=" wrapper" >
+  
+       
             <div id="banner">
              <img src="../../Image/banner.jpg" width="1333" />
 
@@ -74,8 +76,13 @@
                                          <%-- dropGroup--%>
                                      <div class=" menuBarGroup">
                                         <a class="contextItem" href="#"><div class="title">Danh mục tài khoản</div></a>
+<<<<<<< HEAD
                                         <a class="contextItem" href="http://localhost:1616/Content/Danhmuc/danhmuc_bophan.aspx"><div class="title">Danh mục bộ phận</div></a>       
                                           <a class="contextItem" href="http://localhost:1616/Content/Danhmuc/Danhmuckho.aspx"><div class="title">Danh mục kho</div></a>
+=======
+                                        <a class="contextItem" href="#"><div class="title">Danh mục bộ phận</div></a>       
+                                          <a class="contextItem" href="http://localhost:2181/Content/Danhmuc/Danhmuckho.aspx"><div class="title">Danh mục kho</div></a>
+>>>>>>> refs/remotes/origin/master
                                         <a class="contextItem" href="#"><div class="title">Danh mục khách hàng</div></a>  
                                             <a class="contextItem" href="#"><div class="title">Danh mục hàng hóa</div></a>                              
                                         </div>
@@ -115,12 +122,16 @@
                   
                     <%-- Endtaskbar--%>             
               </div>
-
-
+          
+         <div>
+             
+               
+         </div>
+            <form id="form_content" runat="server">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
 
                </asp:ContentPlaceHolder>
-                       
+             </form>          
                <div id="footer" style="font-size: 15px">
                    <div style="padding-top: 1px" class="footer_copyright"> <p> CopyRight &copy; 2016 KieuHanh</p></div>
                    <div class="footer_mail_icon"><img src="../../Image/mail_fix.gif" /> </div> 
@@ -128,15 +139,12 @@
                    <div class="footer_phone_icon"><img src="../../Image/phong_fix.gif" /> </div>
                    <div  class="footer_phone" >01676148868</div> 
                </div>
-      
-          
-
-              
+     
         </div>
      
            
-    </form>
-                
+    
+   
            
 </body>
 </html>
