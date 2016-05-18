@@ -112,4 +112,22 @@ public partial class Content_Danhmuc_Danhmuckho : System.Web.UI.Page
         dgvDmk.EditIndex = -1;
         FillGrid();
     }
+
+
+    protected void BtnSave_Click(object sender, EventArgs e)
+    {
+        conn.Open();
+        string strUpdate = "Insert into  tb_Ma_Kho values (  '" + txtId_Insert.Text + "'  , '" + txtName_insert.Text + "')";
+        SqlCommand cmd = new SqlCommand(strUpdate, conn);
+        cmd.CommandType = CommandType.Text;
+        cmd.ExecuteNonQuery();
+        conn.Close(); 
+        FillGrid();
+    }
+    protected void btnXoa_Click(object sender, EventArgs e)
+    {
+        txtId_Insert.Text = "";
+        txtName_insert.Text = "";
+        txtId_Insert.Focus();
+    }
 }

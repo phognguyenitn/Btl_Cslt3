@@ -6,19 +6,54 @@
             text-align: center;
         }
     </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script>
-        $(document).ready(function () {
-          
-            $("#btn_insertkho").click(function () {
-                $("#danhmuc_insert").show();
-            });
-        });
-</script>
+           <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    
+     <script>
+         $(document).ready(function() {
+             $("#open_kho").click(function () {
+                 $("#block_insertkho").show("Slow");
+             });
+             $("#close_kho").click(function () {
+                 $("#block_insertkho").hide("Slow");
+             });
+         });     
+    </script>
+   
 </asp:Content>
     
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div id="danhmuckho_content">      
+     <div class="danhmuckho_tittle">
+            <div>Danh mục kho</div>
+              <div style="font-size: 12px;">Cập nhập, sửa, xóa danh mục kho</div>
+        </div>     
+    <div id="danhmuckho_content">
+              
+         <div id="open_kho" style="cursor: pointer"  >                      
+             <img src="../../Image/create_icon.gif" />            
+         </div>          
+        <div id="block_insertkho">           
+            <div  id="close_kho" class="title_themkho" style="cursor: pointer">
+                <div style="float: left;margin-left: 5px;">
+                    <img src="../../Image/data_icon_tittle.gif" />  </div>             
+                <div style="float: left;margin-left: 5px;" >Thêm kho</div>
+                <div style="float: right;margin-left: 5px;cursor: pointer">
+                    <img src="../../Image/Close_icon.png" />
+                </div>
+            </div>
+            <div class="content_themkho">
+                <div class="content_themkho_item" style="margin-top: 5px">Mã kho</div>
+                <div class="content_themkho_item"><asp:TextBox runat="server" ID="txtId_Insert"></asp:TextBox></div>
+                <div class="content_themkho_item" style="margin-top: 5px">Tên kho</div>
+                 <div class="content_themkho_item"><asp:TextBox runat="server" ID="txtName_insert"></asp:TextBox></div>
+            </div>
+            <div class="button_themkho" style="padding-bottom: 3px;" >
+                <div class="button_themkho_item" style="margin-left: 155px"><asp:Button runat="server" Text="Save" ID="BtnSave" OnClick="BtnSave_Click" Width="60px"/></div>
+                <div class="button_themkho_item" style="margin-left: 10px"><asp:Button runat="server" Text="Delete" ID="btnXoa" OnClick="btnXoa_Click"  Width="60px"/></div>
+            </div>
+        </div>
+            
+
+     
         <div id="dgv_danhmuckho" class="auto-style2" >
             <asp:HiddenField runat="server" ID="hid"></asp:HiddenField>
             <asp:GridView ID="dgvDmk" runat="server" AllowPaging="True" AutoGenerateColumns="False" PageSize="7" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="3" OnPageIndexChanging="dgvDmk_PageIndexChanging" OnRowCancelingEdit="dgvDmk_RowCancelingEdit" OnRowDataBound="dgvDmk_RowDataBound" OnRowDeleting="dgvDmk_RowDeleting" OnRowEditing="dgvDmk_RowEditing" OnRowUpdating="dgvDmk_RowUpdating">
@@ -36,7 +71,7 @@
                             <asp:Label ID="lblStoreName" runat="server"  Text='<%# Eval("Ten_Kho") %>' Width="100px"></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
-                  <%--  Fix chieu dai cua--%>
+                  <%--  Fix chieu dai cua Field--%>
                     <asp:TemplateField HeaderText="Operate">
                         <HeaderStyle Width="120" />
                         <ItemStyle Width="120" />
@@ -64,12 +99,9 @@
                 <SortedDescendingHeaderStyle BackColor="#00547E" />
             </asp:GridView>
         </div>
-        <div>
-            <asp:Button ID="btn_insertkho" runat="server" Text="Create" />
-        </div>
-        <div id="danhmuc_insert">
-            <div></div>
-        </div>
+   
+    
+     
        
     </div>
 </asp:Content>
