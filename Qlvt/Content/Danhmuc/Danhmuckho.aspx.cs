@@ -138,10 +138,5 @@ public partial class Content_Danhmuc_Danhmuckho : System.Web.UI.Page
         }
        
     }
-    protected void btnXoa_Click(object sender, EventArgs e)
-    {
-        txtId_Insert.Text = string.Empty;
-        txtName_insert.Text = string.Empty;
-        txtId_Insert.Focus();
-    }
+ 
 }

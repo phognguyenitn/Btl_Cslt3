@@ -39,7 +39,7 @@
               <div style="font-size: 12px;">Cập nhập, sửa, xóa danh mục kho</div>
         </div>   
 <%--Content--%>      
-    Them
+    <%--Them--%>
     <div id="danhmuckho_content">             
          <div id="open_kho" style="cursor: pointer"  >                      
              <img src="../../Image/create_icon.gif" />            
@@ -48,7 +48,7 @@
             <div  id="close_kho" class="title_themkho" style="cursor: pointer">
                 <div style="float: left;margin-left: 5px;">
                     <img src="../../Image/data_icon_tittle.gif" />  </div>             
-                <div style="float: left;margin-left: 5px;" >Thêm kho</div>
+               
                 <div style="float: right;margin-left: 5px;cursor: pointer">
                     <img src="../../Image/Close_icon.png" />
                 </div>
