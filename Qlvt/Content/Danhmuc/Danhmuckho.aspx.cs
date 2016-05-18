@@ -11,7 +11,7 @@ using System.Configuration;
 
 public partial class Content_Danhmuc_Danhmuckho : System.Web.UI.Page
 {
-    SqlConnection conn = new SqlConnection("Data Source=PHONG-PC;Initial Catalog=VATTU_DB;Integrated Security=True");
+    SqlConnection conn = new SqlConnection("Data Source=(local);Initial Catalog=VATTU_DB;Integrated Security=True");
     protected void Page_Load(object sender, EventArgs e)
     {
         try
@@ -138,5 +138,16 @@ public partial class Content_Danhmuc_Danhmuckho : System.Web.UI.Page
         }
        
     }
+<<<<<<< HEAD
+    protected void dgvDmk_RowDeleting(object sender, GridViewDeleteEventArgs e)
+    {
+
+    }
+    protected void txtReceive_TextChanged(object sender, EventArgs e)
+    {
+
+    }
+=======
  
+>>>>>>> refs/remotes/origin/master
 }

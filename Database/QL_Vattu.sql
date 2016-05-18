@@ -143,5 +143,7 @@ CREATE TABLE tb_User
 	UserID INT IDENTITY(1,1),
 	UserName NVARCHAR(128),
 	UserPassword NCHAR(75),
+	Email varchar(100),
+	UserRole int ,
 	CONSTRAINT PK_UserID PRIMARY KEY (UserID)
 )

@@ -32,6 +32,34 @@
 </asp:Content>
     
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
+<<<<<<< HEAD
+    <div id="danhmuckho_content">      
+        <div id="dgv_danhmuckho" class="auto-style2" >
+        <asp:GridView ID="dgvDmk" runat="server" AutoGenerateColumns="False" CellPadding="3" BackColor="White"
+             BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Width="459px" AllowPaging="True" OnPageIndexChanging="dgvDmk_PageIndexChanging"
+             OnSelectedIndexChanged="dgvDmk_SelectedIndexChanged" OnRowDataBound="dgvDmk_RowDataBound" CssClass="auto-style1" OnRowDeleting="dgvDmk_RowDeleting">
+            <Columns >
+                <asp:TemplateField HeaderText="Mã Kho">
+                    
+                    <ItemTemplate>
+                        <asp:Label ID="lblStoreId" runat="server" Text='<%#Eval("Ma_Kho") %>'>'></asp:Label>
+                    </ItemTemplate>
+                    
+                </asp:TemplateField>
+
+                <asp:TemplateField HeaderText="Tên Kho">
+                    <ItemTemplate>
+                        <asp:Label ID="lblStoreName" runat="server" Text='<%#Eval("Ten_Kho") %>'></asp:Label>
+                    </ItemTemplate>
+                </asp:TemplateField>
+            
+                <asp:TemplateField HeaderText="Operate" >
+                    <ItemTemplate>
+                        <asp:Button ID="btnEdit" runat="server" Text="Edit" OnClick="btnEdit_Click" />
+                        <asp:Button ID="Button2" runat="server" Text="Delete" />
+                    </ItemTemplate>
+                </asp:TemplateField>
+=======
     
 <%--Tittle--%>
      <div class="danhmuckho_tittle">
@@ -66,6 +94,7 @@
                <div class="button_themkho_item"  style="margin-left: 15px;cursor: pointer" id="cancel_btn">Clear</div>
             </div>
         </div>
+>>>>>>> refs/remotes/origin/master
             
 
      
@@ -115,7 +144,15 @@
             </asp:GridView>
               <div><asp:Label runat="server" ID="lblError"></asp:Label></div>
         </div>
+<<<<<<< HEAD
+        <div>
+            <asp:TextBox runat="server" ID="txtReceive" OnTextChanged="txtReceive_TextChanged"></asp:TextBox>
+              <asp:HiddenField runat="server" ID="hid"></asp:HiddenField>
+        </div>  
+       
+=======
  
+>>>>>>> refs/remotes/origin/master
     </div>
 </asp:Content>
 
