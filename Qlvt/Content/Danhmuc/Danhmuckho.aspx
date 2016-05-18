@@ -16,7 +16,7 @@
         <div id="dgv_danhmuckho" class="auto-style2" >
         <asp:GridView ID="dgvDmk" runat="server" AutoGenerateColumns="False" CellPadding="3" BackColor="White"
              BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" Width="459px" AllowPaging="True" OnPageIndexChanging="dgvDmk_PageIndexChanging"
-             OnSelectedIndexChanged="dgvDmk_SelectedIndexChanged" OnRowDataBound="dgvDmk_RowDataBound" CssClass="auto-style1">
+             OnSelectedIndexChanged="dgvDmk_SelectedIndexChanged" OnRowDataBound="dgvDmk_RowDataBound" CssClass="auto-style1" OnRowDeleting="dgvDmk_RowDeleting">
             <Columns >
                 <asp:TemplateField HeaderText="Mã Kho">
                     
@@ -52,7 +52,7 @@
         </asp:GridView>
         </div>
         <div>
-            <asp:TextBox runat="server" ID="txtReceive"></asp:TextBox>
+            <asp:TextBox runat="server" ID="txtReceive" OnTextChanged="txtReceive_TextChanged"></asp:TextBox>
               <asp:HiddenField runat="server" ID="hid"></asp:HiddenField>
         </div>  
        
