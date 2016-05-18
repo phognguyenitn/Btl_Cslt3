@@ -116,18 +116,32 @@ public partial class Content_Danhmuc_Danhmuckho : System.Web.UI.Page
 
     protected void BtnSave_Click(object sender, EventArgs e)
     {
+
         conn.Open();
-        string strUpdate = "Insert into  tb_Ma_Kho values (  '" + txtId_Insert.Text + "'  , '" + txtName_insert.Text + "')";
-        SqlCommand cmd = new SqlCommand(strUpdate, conn);
-        cmd.CommandType = CommandType.Text;
-        cmd.ExecuteNonQuery();
-        conn.Close(); 
-        FillGrid();
+        string selectstr = "select * from tb_Ma_Kho where Ma_kho = '"+txtId_Insert.Text+"'";       
+        SqlDataAdapter da = new SqlDataAdapter(selectstr,conn);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        int dem = dt.Rows.Count;
+        if (dem < 1)
+        {
+            string strUpdate = "Insert into  tb_Ma_Kho values (  '" + txtId_Insert.Text + "'  , '" + txtName_insert.Text + "')";
+            SqlCommand cmd = new SqlCommand(strUpdate, conn);
+            cmd.CommandType = CommandType.Text;
+            cmd.ExecuteNonQuery();
+            conn.Close();
+            FillGrid();
+        }
+        else
+        {
+            lblError.Text = "Đã tồn tại Mã kho";
+        }
+       
     }
     protected void btnXoa_Click(object sender, EventArgs e)
     {
-        txtId_Insert.Text = "";
-        txtName_insert.Text = "";
+        txtId_Insert.Text = string.Empty;
+        txtName_insert.Text = string.Empty;
         txtId_Insert.Focus();
     }
 }
